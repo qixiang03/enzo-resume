@@ -97,6 +97,11 @@ section {
   scroll-margin-top: calc(var(--site-header-height) + 16px);
 }
 
+section:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
 
 h2 {
   margin-top: 0;
