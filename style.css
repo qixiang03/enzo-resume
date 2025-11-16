@@ -1,0 +1,130 @@
+/* Global reset-ish */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f5f5;
+  color: #1b1919;
+  line-height: 1.5;
+}
+
+/* Container for centered content */
+.container {
+  width: min(900px, 100% - 2rem);
+  margin: 0 auto;
+}
+
+:root {
+  /* fallback value; JS will override with actual height */
+  --site-header-height: 80px;
+}
+
+/* Header */
+.site-header {
+  background: #1b1919;
+  color: #fff;
+  padding: 2.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35); /* ⬅ new */
+}
+
+
+.site-header h1 {
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.contact {
+  font-size: 0.9rem;
+}
+
+.contact a {
+  color: #ffd166;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: #ffd166;
+  color: #111;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+
+
+
+/* Main sections */
+main {
+  padding: 2rem 0 3rem;
+}
+
+section {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  padding: 2.2rem 1.5rem 1.5rem; /* ⬅️ increased top padding */
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  position: relative; /* good practice with sticky children */
+  scroll-margin-top: calc(var(--site-header-height) + 16px);
+}
+
+
+h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #eee;
+  padding: 0.4rem 0 0.6rem;
+
+  /* sticky behaviour */
+  position: sticky;
+  top: calc(var(--site-header-height) + 8px); /* stays under site header */
+  background: #fff;
+  z-index: 90; /* below header (100), above section content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+
+h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: 1.1rem;
+  margin: 0.25rem 0 0;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    text-align: center;
+  }
+}

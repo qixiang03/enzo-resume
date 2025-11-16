@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enzo Phang | Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>ENZO PHANG</h1>
+      <p class="tagline">
+        Penta-lingual Malaysian Computer Science Student · Full-Stack Developer
+      </p>
+      <div class="contact">
+        <span>Stratford, PE</span> ·
+        <span>(902) 916-8723</span> ·
+        <span><a href="mailto:qphang@upei.ca?subject=Hello&body=Feel%20free%20to%20connect!">qphang@upei.ca</a></span> ·
+        <a href="https://linkedin.com/in/qx-phang" target="_blank">LinkedIn</a>
+      </div>
+      <div class="actions">
+      <a class="btn-primary" href="enzo-phang-resume.pdf" download>
+          Download Resume (PDF)
+      </a>
+    </div>
+    
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="summary">
+      <h2>PROFESSIONAL SUMMARY</h2>
+      <p>
+        Penta-lingual Malaysian Computer Science student with experience in application
+        development, system configuration, and project management. Skilled in full-stack
+        development, API integration, and database management. Strong foundation in
+        business relationship management through client-facing roles and team leadership.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>EDUCATION</h2>
+
+      <article>
+        <h3>University of Prince Edward Island, Charlottetown, PE</h3>
+        <p><em>Bachelor of Science, Major in Computer Science</em> · September 2023 – Present</p>
+        <ul>
+          <li>CGPA: 4.12/4.3 – Excellent academic standing</li>
+          <li>Relevant coursework: Software Engineering, Database Systems, Operating Systems, Project Management, Data Structures, Computer Networks, French Composition Analysis</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Taylor's University, Malaysia</h3>
+        <p><em>Bachelor of Computer Science</em> · August 2022 – July 2023</p>
+        <ul>
+          <li>Dean's List for 3 consecutive semesters (CGPA: 3.87/4.0)</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="technical-competencies">
+      <h2>TECHNICAL COMPETENCIES</h2>
+
+      <article>
+        <p><strong>Programming Languages:</strong> JavaScript, Python, Java, C#, SQL, HTML, CSS</p>
+        <p><strong>Frameworks & Libraries:</strong> React, Node.js, Express</p>
+        <p><strong>Development Methodologies:</strong> Agile Development, Application Lifecycle Management, Version
+Control (Git)</p>
+        <p><strong>API Development:</strong> RESTful APIs, Application Program Interfaces (API), WebSocket
+Integration</p>
+        <p><strong>Tools & Platforms:</strong> Docker, CI/CD Pipelines, Cloud Services (AWS/Heroku), Documentation
+Management</p>
+      </article>
+    </section>
+
+    <section id="relevant-experience">
+      <h2>RELEVANT EXPERIENCE</h2>
+
+      <article>
+        <h3>Full-Stack Developer (Self-Directed Project, Ongoing)</h3>
+        <p><em>Collaborative Task Management Platform (MERN Stack)</em> · September 2025 – Present</p>
+        <ul>
+          <li>Leading end-to-end application lifecycle management from requirements gathering to
+deployment</li>
+          <li>Implementing role-based access control and user authentication systems</li>
+          <li>Developing RESTful APIs for system integration and data communication</li>
+          <li>Managing project documentation and technical specifications</li>
+          <li>Establishing continuous integration pipeline and automated testing procedures</li>
+          <li>Demonstrating strategic planning through technology stack selection and architecture design</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Server & Operation Coordinator</h3>
+        <p><em>Yumi Sushi Charlottetown</em> · September 2023 – August 2024</p>
+        <ul>
+          <li>Execute <strong>vendor management</strong> across 7+ suppliers, achieving 47% cost reduction through
+strategic negotiations</li>
+          <li>Implement <strong>operational management</strong> procedures for team scheduling</li>
+          <li>Demonstrate <strong>client satisfaction</strong> focus through problem resolutions</li>
+          <li>Manage <strong>financial reconciliation</strong> with 100% accuracy</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Treasurer & Technical Lead</h3>
+        <p><em>School of Mathematical and Computational Sciences Student Society, UPEI</em> · September 2023 – August 2024</p>
+        <ul>
+          <li>Manage budget preparation and financial management for student organization</li>
+          <li>Lead team supervision of technical workshop initiatives</li>
+          <li>Coordinate with stakeholders to organize programming sessions</li>
+          <li>Maintain documentation and operational management of technical infrastructure</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <section id="project-portfolio">
+        <h2>PROJECT PORTFOLIO</h2>
+        <article>
+        <h3>Electronic Medical Records System</h3>
+        <ul>
+          <li>Developed business application with complete CRUD operations</li>
+          <li>Implemented data validation and error handling procedures</li>
+          <li>Applied object-oriented programming for maintainable, scalable system configuration</li>
+          <li>Designed efficient database management system using file handling</li>
+        </ul>
+        </article>
+
+        <article>
+        <h3>Urban Farm Monitoring System</h3>
+        <ul>
+          <li>Created application management solution using Flutter and computer vision</li>
+          <li>Developed API integration for real-time data communication</li>
+          <li>Implemented agile methodology for iterative development</li>
+          <li>Demonstrated problem-solving in complex system architecture</li>
+        </ul>
+        </article>
+    </section>
+  </main>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('.site-header');
+    const root = document.documentElement;
+    if (!header) return;
+
+    function updateHeaderHeight() {
+      const h = Math.ceil(header.getBoundingClientRect().height);
+      root.style.setProperty('--site-header-height', h + 'px');
+    }
+
+    updateHeaderHeight();
+    window.addEventListener('resize', updateHeaderHeight);
+
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(updateHeaderHeight).observe(header);
+    }
+  });
+  </script>
+  
+</body>
+</html>
